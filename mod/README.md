@@ -1,6 +1,6 @@
 # Overview
 
-This is a compatibility patch between the Machine Shipset and Gigastructural Engineering & More (3.1) to allow the additional three sizes of ringworld use the Machine Shipset graphics (including the Hive and machine variants).  That includes Titanic, Behemoth, and Gargantuan.
+This is a compatibility patch between the Machine Shipset and Gigastructural Engineering & More (3.1) to allow the additional three sizes of ringworld use the Machine Shipset graphics (including the Hive and machine variants).  That includes titanic, behemoth, and gargantuan.
 
 Warning: the graphics from Machine Shipset are not altered to reduce their curvature, so ringworld appearance is somewhat "bendy."  See sample images.
 
@@ -27,6 +27,10 @@ Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
 [Ringworld Graphical Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2628518102) to apply the owner's graphical culture to the standard ringworld from Origin: Shattered Ring.  Using my mod Subtle Polish is not recommended due to a high likelihood of conflicts with Gigas.
 
 [Machine Shipset Add-on: Shattered Ring Appearance](https://steamcommunity.com/sharedfiles/filedetails/?id=2628980994) ensures that the permanently-destroyed sections for Origin: Shattered Ring using the Machine Shipset properly display as that shipset.  Adds missing graphical definitions to the Machine Shipset.
+
+### When to Install
+
+This mod can be safely added after the game has started, but should not be removed from a game in-progress.  It can theoretically be removed from a game in progress - any titanic, behemoth, or gargantuan ringworlds should revert to the fallback appearance for the Machine Shipset (`mammalian_01`).  Back up your savegame before attempting to remove a mod.
 
 ## Changelog
 
