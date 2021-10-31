@@ -96,9 +96,10 @@ country_event = {
 				trigger = is_megastructure_type
 				ringworld_titanic_1 = {
 					prev.fromfrom = {
-						log = "set culture on all Titanic frames in [This.GetName]"
+						log = "set culture on all titanic frames in [This.GetName]"
 						every_system_megastructure = {
 							limit = { is_megastructure_type = ringworld_t_3x_segment }
+							log = "set culture on titanic frame [This.GetName] to machine_01"
 							set_graphical_culture = machine_01
 						}
 					}
@@ -169,6 +170,7 @@ country_event = {
 						is_planet_class = pc_ringworld_habitable
 						has_planet_flag = giga_ringworld_tit
 					}
+					log = "set culture on hab [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_gaia_habitable_sector_entity"
 						graphical_culture = machine_01
@@ -179,6 +181,7 @@ country_event = {
 						is_planet_class = pc_ringworld_seam
 						has_planet_flag = giga_ringworld_tit
 					}
+					log = "set culture on seam [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_seam_sector_entity"
 						graphical_culture = machine_01
@@ -189,6 +192,7 @@ country_event = {
 						is_planet_class = pc_ringworld_tech
 						has_planet_flag = giga_ringworld_tit
 					}
+					log = "set culture on tech [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_tech_sector_entity"
 						graphical_culture = machine_01
