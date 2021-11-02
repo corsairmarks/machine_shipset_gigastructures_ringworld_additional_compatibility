@@ -90,23 +90,19 @@ country_event = {
 		}
 	}
 	immediate = {
-		log = "upgrade complete [From.GetName]"
 		from = {
 			switch = {
 				trigger = is_megastructure_type
 				ringworld_titanic_1 = {
 					prev.fromfrom = {
-						log = "set culture on all titanic frames in [This.GetName]"
 						every_system_megastructure = {
 							limit = { is_megastructure_type = ringworld_t_3x_segment }
-							log = "set culture on titanic frame [This.GetName] to machine_01"
 							set_graphical_culture = machine_01
 						}
 					}
 				}
 				ringworld_behemoth_1 = {
 					prev.fromfrom = {
-						log = "set culture on all Behemoth frames in [This.GetName]"
 						every_system_megastructure = {
 							limit = { is_megastructure_type = ringworld_b_3x_segment }
 							set_graphical_culture = machine_01
@@ -115,7 +111,6 @@ country_event = {
 				}
 				ringworld_gargantuan_1 = {
 					prev.fromfrom = {
-						log = "set culture on all Gargantuan frames in [This.GetName]"
 						every_system_megastructure = {
 							limit = { is_megastructure_type = ringworld_g_3x_segment }
 							set_graphical_culture = machine_01
@@ -153,7 +148,6 @@ country_event = {
 		}
 	}
 	immediate = {
-		log = "upgrade complete [From.GetName]"
 		if = {
 			limit  = {
 				from = {
@@ -164,13 +158,15 @@ country_event = {
 				}
 			}
 			fromfrom = {
-				log = "set entity on all Titanic planets in [This.GetName]"
 				every_system_planet = {
 					limit = {
 						is_planet_class = pc_ringworld_habitable
 						has_planet_flag = giga_ringworld_tit
+						NOR = {
+							has_planet_flag = giga_ringworld_beh
+							has_planet_flag = giga_ringworld_gar
+						}
 					}
-					log = "set culture on hab [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_gaia_habitable_sector_entity"
 						graphical_culture = machine_01
@@ -180,8 +176,11 @@ country_event = {
 					limit = {
 						is_planet_class = pc_ringworld_seam
 						has_planet_flag = giga_ringworld_tit
+						NOR = {
+							has_planet_flag = giga_ringworld_beh
+							has_planet_flag = giga_ringworld_gar
+						}
 					}
-					log = "set culture on seam [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_seam_sector_entity"
 						graphical_culture = machine_01
@@ -191,8 +190,11 @@ country_event = {
 					limit = {
 						is_planet_class = pc_ringworld_tech
 						has_planet_flag = giga_ringworld_tit
+						NOR = {
+							has_planet_flag = giga_ringworld_beh
+							has_planet_flag = giga_ringworld_gar
+						}
 					}
-					log = "set culture on tech [This.GetName] to machine_01"
 					set_planet_entity = {
 						entity = "titanic_tech_sector_entity"
 						graphical_culture = machine_01
@@ -210,11 +212,11 @@ country_event = {
 				}
 			}
 			fromfrom = {
-				log = "set entity on all Behemoth planets in [This.GetName]"
 				every_system_planet = {
 					limit = {
 						is_planet_class = pc_ringworld_habitable
 						has_planet_flag = giga_ringworld_beh
+						NOT = { has_planet_flag = giga_ringworld_gar }
 					}
 					set_planet_entity = {
 						entity = "behemoth_gaia_habitable_sector_entity"
@@ -225,6 +227,7 @@ country_event = {
 					limit = {
 						is_planet_class = pc_ringworld_seam
 						has_planet_flag = giga_ringworld_beh
+						NOT = { has_planet_flag = giga_ringworld_gar }
 					}
 					set_planet_entity = {
 						entity = "behemoth_seam_sector_entity"
@@ -235,6 +238,7 @@ country_event = {
 					limit = {
 						is_planet_class = pc_ringworld_tech
 						has_planet_flag = giga_ringworld_beh
+						NOT = { has_planet_flag = giga_ringworld_gar }
 					}
 					set_planet_entity = {
 						entity = "behemoth_tech_sector_entity"
@@ -253,7 +257,6 @@ country_event = {
 				}
 			}
 			fromfrom = {
-				log = "set entity on all Gargantuan planets in [This.GetName]"
 				every_system_planet = {
 					limit = {
 						is_planet_class = pc_ringworld_habitable
