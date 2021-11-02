@@ -42,23 +42,17 @@ country_event = {
 		from = {
 			OR = {
 				# titanic
-				is_megastructure_type = ringworld_titanic_0
-				is_megastructure_type = ringworld_titanic_1
 				is_megastructure_type = ringworld_t_3x_segment
 				is_megastructure_type = ringworld_titanic_2
-				is_megastructure_type = ring_world_titanic_ruined
+				is_megastructure_type = ring_world_titanic_restored
 				# behemoth
-				is_megastructure_type = ringworld_behemoth_0
-				is_megastructure_type = ringworld_behemoth_1
 				is_megastructure_type = ringworld_b_3x_segment
 				is_megastructure_type = ringworld_behemoth_2
-				is_megastructure_type = ring_world_behemoth_ruined
+				is_megastructure_type = ring_world_behemoth_restored
 				# gargantuan
-				is_megastructure_type = ringworld_gargantuan_0
-				is_megastructure_type = ringworld_gargantuan_1
 				is_megastructure_type = ringworld_g_3x_segment
 				is_megastructure_type = ringworld_gargantuan_2
-				is_megastructure_type = ring_world_gargantuan_ruined
+				is_megastructure_type = ring_world_gargantuan_restored
 			}
 		}
 	}
