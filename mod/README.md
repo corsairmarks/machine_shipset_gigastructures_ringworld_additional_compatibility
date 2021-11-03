@@ -22,7 +22,7 @@ Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements, but
 
 ### Recommended Companion Mods
 
-[Machine Shipset Add-on: Gigastructural Engineering Ringworlds - Standard Ringworlds]() to enable the Machine Shipset graphics for standard-sized ringworlds.
+[Machine Shipset Add-on: Gigastructural Engineering Ringworlds - Standard Ringworlds](https://steamcommunity.com/sharedfiles/filedetails/?id=2644466861) to enable the Machine Shipset graphics for standard-sized ringworlds.
 
 [Ringworld Graphical Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2628518102) to apply the owner's graphical culture to the standard ringworld from Origin: Shattered Ring.  Using my mod Subtle Polish is not recommended due to a high likelihood of conflicts with Gigas.
 
