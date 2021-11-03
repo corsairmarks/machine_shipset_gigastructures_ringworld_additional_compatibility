@@ -6,11 +6,11 @@ Warning: the graphics from Machine Shipset are not altered to reduce their curva
 
 # Changes
 
-Adds graphical entities for the Machine Shipset that are compatible with the new ringworld types from Gigastructural Engineering & More (3.1).  Adds an event to assign the `machine_01` graphical culture to these ringworld megastructures if the constructing empire has that graphical culture.
+Adds graphical entities for the Machine Shipset that are compatible with the new ringworld types from Gigastructural Engineering & More (3.1).  Adds an event to assign the `machine_01` graphical culture to these ringworld megastructures if the constructing empire has that graphical culture.  Overrides the final stage of titanic, behemoth, and gargantuan ringworld construction as well as restoration from ruined, so that seam sections are flagged and can be identified for changing the graphical culture.
 
 ## Compatibility
 
-Same compatibility as Gigastructural Engineering & More (3.1).
+Same compatibility as Gigastructural Engineering & More (3.1).  Overrides six megastructures from Gigastructural Engineering: `ringworld_titanic_2`, `ring_world_titanic_restored`, `ringworld_behemoth_2`, `ring_world_behemoth_restored`, `ringworld_gargantuan_2`, and `ring_world_gargantuan_restored` in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture.
 
 Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
 
@@ -31,6 +31,20 @@ Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
 ### When to Install
 
 This mod can be safely added after the game has started, but should not be removed from a game in-progress.  It can theoretically be removed from a game in progress - any titanic, behemoth, or gargantuan ringworlds should revert to the fallback appearance for the Machine Shipset (`mammalian_01`).  Back up your savegame before attempting to remove a mod.
+
+
+### Known Issues
+
+Overriding a megastructure results in the game logging an error in the error.log file.  Expect to see six errors like this:
+
+```
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_behemoth_2 already exists
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_behemoth_restored already exists
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_gargantuan_2 already exists
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_gargantuan_restored already exists
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_titanic_2 already exists
+[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_titanic_restored already exists
+```
 
 ## Changelog
 
