@@ -10,9 +10,9 @@ Adds graphical entities for the Machine Shipset that are compatible with the new
 
 ## Compatibility
 
-Same compatibility as Gigastructural Engineering & More (3.1).  Overrides six megastructures from Gigastructural Engineering: `ringworld_titanic_2`, `ring_world_titanic_restored`, `ringworld_behemoth_2`, `ring_world_behemoth_restored`, `ringworld_gargantuan_2`, and `ring_world_gargantuan_restored` in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture.
+Same compatibility as Gigastructural Engineering & More (3.1).  Overrides six megastructures from Gigastructural Engineering: `ringworld_titanic_2`, `ring_world_titanic_restored`, `ringworld_behemoth_2`, `ring_world_behemoth_restored`, `ringworld_gargantuan_2`, and `ring_world_gargantuan_restored` in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture, which could conflict with other Gigastructres add-ons.
 
-Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements, but neither are the dependencies.
 
 ### Required Dependency Mods
 
@@ -31,7 +31,6 @@ Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
 ### When to Install
 
 This mod can be safely added after the game has started, but should not be removed from a game in-progress.  It can theoretically be removed from a game in progress - any titanic, behemoth, or gargantuan ringworlds should revert to the fallback appearance for the Machine Shipset (`mammalian_01`).  Back up your savegame before attempting to remove a mod.
-
 
 ### Known Issues
 
