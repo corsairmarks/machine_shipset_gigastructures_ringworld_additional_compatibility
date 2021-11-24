@@ -1,7 +1,7 @@
 name="Machine Shipset Add-on: Gigastructural Engineering Ringworlds - Titanic, Behemoth, and Gargantuan"
 dependencies={
 	"Machine Shipset"
-	"Gigastructural Engineering & More (3.1)"
+	"Gigastructural Engineering & More (3.2)"
 }
 tags={
 	"Graphics"
