@@ -12,7 +12,7 @@ Adds graphical entities for the Machine Shipset that are compatible with the new
 
 Same compatibility as Gigastructural Engineering & More (3.2).  Overrides six megastructures from Gigastructural Engineering: `ringworld_titanic_2`, `ring_world_titanic_restored`, `ringworld_behemoth_2`, `ring_world_behemoth_restored`, `ringworld_gargantuan_2`, and `ring_world_gargantuan_restored` in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture, which could conflict with other Gigastructres add-ons.
 
-Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements, but neither are the dependencies.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements, but neither are the dependencies.
 
 ### Required Dependency Mods
 
@@ -49,6 +49,7 @@ Overriding a megastructure results in the game logging an error in the error.log
 
 * 1.0.0 Initial version
 * 1.1.0 Mark as compatible with Stellaris version 3.2 "Herbert" - no script changes
+* 1.2.0 Mark as compatible with Stellaris version 3.3 "Libra" - no script changes
 
 ## Source Code
 
