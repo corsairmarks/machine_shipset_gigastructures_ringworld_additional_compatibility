@@ -1,5 +1,4 @@
 [h1]Overview[/h1]
-
 This is a compatibility patch between the Machine Shipset and Gigastructural Engineering & More (3.3) to allow the additional three sizes of ringworld use the Machine Shipset graphics (including the Hive and machine variants).  That includes titanic, behemoth, and gargantuan.
 
 Warning: the graphics from Machine Shipset are not altered to reduce their curvature, so ringworld appearance is somewhat "bendy."  See sample images.
