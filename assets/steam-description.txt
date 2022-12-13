@@ -29,12 +29,12 @@ This mod can be safely added after the game has started, but should not be remov
 [h3]Known Issues[/h3]
 Overriding a megastructure results in the game logging an error in the error.log file.  Expect to see six errors like this:
 [code]
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_behemoth_2 already exists
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_behemoth_restored already exists
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_gargantuan_2 already exists
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_gargantuan_restored already exists
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ringworld_titanic_2 already exists
-[22:12:03][game_singleobjectdatabase.h:147]: Object with key: ring_world_titanic_restored already exists
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_behemoth_2 already exists, using the one at  file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_behemoth_restored already exists, using the one at  file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 190
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_gargantuan_2 already exists, using the one at  file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_gargantuan_restored already exists, using the one at  file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 196
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_titanic_2 already exists, using the one at  file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_titanic_restored already exists, using the one at  file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 179
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2644469566]Change Notes[/url]
