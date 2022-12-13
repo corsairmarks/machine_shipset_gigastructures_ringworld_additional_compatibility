@@ -3,6 +3,7 @@ ringworld_titanic_2 = {
 	construction_entity = "titanic_quarter_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { ringworld_t_3x_segment }
+	show_in_outliner = no
 
 	build_time = 7200
 	resources = {
@@ -15,9 +16,8 @@ ringworld_titanic_2 = {
 
 	ai_weight = { factor = 10 } # If we can build it, we will build it
 	on_build_complete = {
-		log = "build of [FromFrom.GetName] in [This.GetName] (orbiting [FromFrom.Planet.GetName]) owned by [From.GetRealName] completed"
 		save_event_target_as = giga_system
-		fromfrom.star = { save_event_target_as = giga_planet }
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
 		from = {
 			country_event = { id = giga_dialog.2103 }				# Notification
 			set_country_flag = has_built_or_repaired_gigastructure	# Triggers Gigastructural Constructs
@@ -50,7 +50,7 @@ ringworld_titanic_2 = {
 			location = fromfrom
 			orbit_angle_offset = 30
 			init_effect = {
-				set_name = "Ring Section Tech"
+				set_name = "Ring Section"
 				set_planet_entity = {
 					entity = "titanic_tech_sector_entity"
 					graphical_culture = mammalian_01
@@ -58,8 +58,7 @@ ringworld_titanic_2 = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 			}
@@ -68,7 +67,7 @@ ringworld_titanic_2 = {
 			class = "pc_ringworld_seam"
 			location = fromfrom
 			init_effect = {
-				set_name = "Ring Section Seam"
+				set_name = "Ring Section"
 				set_planet_entity = {
 					entity = "titanic_seam_sector_entity"
 					graphical_culture = mammalian_01
@@ -76,8 +75,7 @@ ringworld_titanic_2 = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = giga_ringworld_tit
 			}
 		}
@@ -97,11 +95,12 @@ ringworld_titanic_2 = {
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				add_modifier = { modifier = "giga_titanic_housing" days = -1 }
+
+				giga_start_ai_colony_if_safe = yes
 			}
 		}
 		if = {		limit = { NOT = { has_star_flag = ring_01 } } set_star_flag = ring_01 event_target:ring_section = { set_name = "Habitable Section A" } }
@@ -182,6 +181,7 @@ ring_world_titanic_restored = {
 	construction_entity = "titanic_quarter_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { ring_world_titanic_ruined }
+	show_in_outliner = no
 
 	build_time = 7200
 	resources = {
@@ -201,6 +201,16 @@ ring_world_titanic_restored = {
 		modifier = {
 			weight = 0
 			from = { is_country_type = fallen_empire }
+		}
+		# give the AI some breathing room to do *something else* than the onion ring
+		modifier = {
+			weight = 0
+			from = {
+				has_monthly_income = {
+					resource = alloys
+					value < 1500
+				}
+			}
 		}
 	}
 
@@ -231,7 +241,7 @@ ring_world_titanic_restored = {
 		giga_remove_system_debris = yes
 
 		save_event_target_as = giga_system
-		fromfrom.star = { save_event_target_as = giga_planet }
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
 		from = {
 			country_event = { id = giga_dialog.2105 }				# Notification
 			set_country_flag = has_built_or_repaired_gigastructure	# Triggers Gigastructural Constructs
@@ -272,8 +282,7 @@ ring_world_titanic_restored = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 			}
@@ -290,8 +299,7 @@ ring_world_titanic_restored = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = giga_ringworld_tit
 			}
 		}
@@ -311,11 +319,12 @@ ring_world_titanic_restored = {
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				add_modifier = { modifier = "giga_titanic_housing" days = -1 }
+
+				giga_start_ai_colony_if_safe = yes
 			}
 		}
 		if = {		limit = { NOT = { has_star_flag = ring_01 } } set_star_flag = ring_01 event_target:ring_section = { set_name = "Habitable Section A" } }

@@ -3,6 +3,7 @@ ringworld_behemoth_2 = {
 	construction_entity = "behemoth_quarter_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { ringworld_b_3x_segment }
+	show_in_outliner = no
 
 	build_time = 10800
 	resources = {
@@ -23,10 +24,10 @@ ringworld_behemoth_2 = {
 		}
 	}
 
-	ai_weight = { factor = 10 } # If we can build it, we will build it
+	ai_weight = { factor = value:giga_ai_base_continue } # If we can build it, we will build it
 	on_build_complete = {
 		save_event_target_as = giga_system
-		fromfrom.star = { save_event_target_as = giga_planet }
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
 		from = { country_event = { id = giga_dialog.2203 } }	# Notification
 
 		change_variable = { which = b_ring_segments value = 1 }
@@ -64,8 +65,7 @@ ringworld_behemoth_2 = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
@@ -84,8 +84,7 @@ ringworld_behemoth_2 = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
 			}
@@ -106,12 +105,13 @@ ringworld_behemoth_2 = {
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
 				add_modifier = { modifier = "giga_behemoth_housing" days = -1 }
+
+				giga_start_ai_colony_if_safe = yes
 			}
 		}
 		if = {		limit = { NOT = { has_star_flag = ring_01 } } set_star_flag = ring_01 event_target:ring_section = { set_name = "Habitable Section A" } }
@@ -192,6 +192,7 @@ ring_world_behemoth_restored = {
 	construction_entity = "behemoth_quarter_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { ring_world_behemoth_ruined }
+	show_in_outliner = no
 
 	build_time = 10800
 	resources = {
@@ -213,10 +214,20 @@ ring_world_behemoth_restored = {
 	}
 
 	ai_weight = {
-		weight = 300
+		factor = value:giga_ai_base_repairs
 		modifier = {
 			weight = 0
 			from = { is_country_type = fallen_empire }
+		}
+		# give the AI some breathing room to do *something else* than the onion ring
+		modifier = {
+			weight = 0
+			from = {
+				has_monthly_income = {
+					resource = alloys
+					value < 2000
+				}
+			}
 		}
 	}
 
@@ -246,7 +257,7 @@ ring_world_behemoth_restored = {
 	on_build_complete = {
 		giga_remove_system_debris = yes
 		save_event_target_as = giga_system
-		fromfrom.star = { save_event_target_as = giga_planet }
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
 		from = { country_event = { id = giga_dialog.2205 } }	# Notification
 
 		change_variable = { which = b_ring_segments value = 1 }
@@ -284,8 +295,7 @@ ring_world_behemoth_restored = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
@@ -304,8 +314,7 @@ ring_world_behemoth_restored = {
 				set_surveyed = { surveyed = yes surveyor = from }
 				set_all_comms_surveyed = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
 			}
@@ -326,12 +335,13 @@ ring_world_behemoth_restored = {
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = forbid_guillis_planet_modifiers
-				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
-				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = megastructure
 				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
 				set_planet_flag = giga_ringworld_tit
 				set_planet_flag = giga_ringworld_beh
 				add_modifier = { modifier = "giga_behemoth_housing" days = -1 }
+
+				giga_start_ai_colony_if_safe = yes
 			}
 		}
 		if = {		limit = { NOT = { has_star_flag = ring_01 } } set_star_flag = ring_01 event_target:ring_section = { set_name = "Habitable Section A" } }
