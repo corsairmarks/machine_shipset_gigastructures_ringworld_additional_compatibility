@@ -16,17 +16,14 @@ Built for Stellaris version 3.6 "Orion."  Not compatible with achievements, but 
 
 ### Required Dependency Mods
 
-[Machine Shipset](https://steamcommunity.com/sharedfiles/filedetails/?id=2077186491) for the original graphics and other ship-related code.
-
-[Gigastructural Engineering & More (3.6)](https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237) is the mod we're making compatible.
+* [Machine Shipset](https://steamcommunity.com/sharedfiles/filedetails/?id=2077186491) for the original graphics and other ship-related code
+* [Gigastructural Engineering & More (3.6)](https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237) is the mod we're making compatible
 
 ### Recommended Companion Mods
 
-[Machine Shipset Add-on: Gigastructural Engineering Ringworlds - Standard Ringworlds](https://steamcommunity.com/sharedfiles/filedetails/?id=2644466861) to enable the Machine Shipset graphics for standard-sized ringworlds.
-
-[Ringworld Graphical Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2628518102) to apply the owner's graphical culture to the standard ringworld from Origin: Shattered Ring.  Using my mod Subtle Polish is not recommended due to a high likelihood of conflicts with Gigas.
-
-[Machine Shipset Add-on: Shattered Ring Appearance](https://steamcommunity.com/sharedfiles/filedetails/?id=2628980994) ensures that the permanently-destroyed sections for Origin: Shattered Ring using the Machine Shipset properly display as that shipset.  Adds missing graphical definitions to the Machine Shipset.
+* [Machine Shipset Add-on: Gigastructural Engineering Ringworlds - Standard Ringworlds](https://steamcommunity.com/sharedfiles/filedetails/?id=2644466861) to enable the Machine Shipset graphics for standard-sized ringworlds
+* [Ringworld Graphical Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2628518102) to apply the owner's graphical culture to the standard ringworld from Origin: Shattered Ring ( my mod Subtle Polish is not recommended due to a high likelihood of conflicts with Gigas)
+* [Machine Shipset Add-on: Shattered Ring Appearance](https://steamcommunity.com/sharedfiles/filedetails/?id=2628980994) ensures that the permanently-destroyed sections for Origin: Shattered Ring using the Machine Shipset properly display as that shipset (adds missing graphical definitions to the Machine Shipset)
 
 ### When to Install
 
@@ -53,6 +50,7 @@ Overriding a megastructure results in the game logging an error in the error.log
 * 1.3.0 Mark as compatible with Stellaris version 3.4 "Cepheus" - no script changes
 * 2.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Integrate underlying changes from Gigastructural Engineering
+* 2.1.0 Add compatibility trigger for other mods to check whether this one is active
 
 ## Source Code
 
