@@ -212,11 +212,7 @@ entity = {
 	}
 
 	default_state = "idle"
-	state = { name = "idle" state_time = 5
-		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
-		event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
-		event = { time = 2 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
-	}
+	state = { name = "idle" }
 	state = { name = "construction" }
 
 	meshsettings = {

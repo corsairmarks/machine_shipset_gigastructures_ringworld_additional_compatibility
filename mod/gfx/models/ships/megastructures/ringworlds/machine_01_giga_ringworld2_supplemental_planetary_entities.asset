@@ -178,7 +178,7 @@ entity = {
 	}
 
 	default_state = "idle"
-	state = { name = "idle" state_time = 5 }
+	state = { name = "idle" }
 	state = { name = "construction" }
 }
 
