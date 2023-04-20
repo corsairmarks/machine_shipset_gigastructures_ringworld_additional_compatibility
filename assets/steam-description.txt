@@ -1,20 +1,20 @@
 [h1]Overview[/h1]
-This is a compatibility patch between the Machine Shipset and Gigastructural Engineering & More (3.6) to allow the additional three sizes of ringworld use the Machine Shipset graphics (including the Hive and machine variants).  That includes titanic, behemoth, and gargantuan.
+This is a compatibility patch between the Machine Shipset and Gigastructural Engineering & More (3.7) to allow the additional three sizes of ringworld use the Machine Shipset graphics (including the Hive and machine variants). That includes titanic, behemoth, and gargantuan.
 
-Warning: the graphics from Machine Shipset are not altered to reduce their curvature, so ringworld appearance is somewhat "bendy."  See sample images.
+Warning: the graphics from Machine Shipset are not altered to reduce their curvature, so ringworld appearance is somewhat "bendy." See sample images.
 
 [h1]Changes[/h1]
-Adds graphical entities for the Machine Shipset that are compatible with the new ringworld types from Gigastructural Engineering & More (3.6).  Adds an event to assign the [b]machine_01[/b] graphical culture to these ringworld megastructures if the constructing empire has that graphical culture.  Overrides the final stage of titanic, behemoth, and gargantuan ringworld construction as well as restoration from ruined, so that seam sections are flagged and can be identified for changing the graphical culture.
+Adds graphical entities for the Machine Shipset that are compatible with the new ringworld types from Gigastructural Engineering & More (3.7). Adds an event to assign the [b]machine_01[/b] graphical culture to these ringworld megastructures if the constructing empire has that graphical culture. Overrides the final stage of titanic, behemoth, and gargantuan ringworld construction as well as restoration from ruined, so that seam sections are flagged and can be identified for changing the graphical culture.
 
 [h2]Compatibility[/h2]
-Same compatibility as Gigastructural Engineering & More (3.6).  Overrides six megastructures from Gigastructural Engineering: [b]ringworld_titanic_2[/b], [b]ring_world_titanic_restored[/b], [b]ringworld_behemoth_2[/b], [b]ring_world_behemoth_restored[/b], [b]ringworld_gargantuan_2[/b], and [b]ring_world_gargantuan_restored[/b] in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture, which could conflict with other Gigastructres add-ons.
+Same compatibility as Gigastructural Engineering & More (3.7). Overrides six megastructures from Gigastructural Engineering: [b]ringworld_titanic_2[/b], [b]ring_world_titanic_restored[/b], [b]ringworld_behemoth_2[/b], [b]ring_world_behemoth_restored[/b], [b]ringworld_gargantuan_2[/b], and [b]ring_world_gargantuan_restored[/b] in order to ensure the seam sectors are flagged with the ringworld size, for easier targeting to change the graphical culture, which could conflict with other Gigastructres add-ons.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements, but neither are the dependencies.
+Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements, but neither are the dependencies.
 
 [h3]Required Dependency Mods[/h3]
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2077186491]Machine Shipset[/url] for the original graphics and other ship-related code
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Gigastructural Engineering & More (3.6)[/url] is the mod we're making compatible
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Gigastructural Engineering & More (3.7)[/url] is the mod we're making compatible
 [/list]
 [h3]Recommended Companion Mods[/h3]
 [list]
@@ -23,17 +23,17 @@ Built for Stellaris version 3.6 "Orion."  Not compatible with achievements, but 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2628980994]Machine Shipset Add-on: Shattered Ring and Habitat Appearance[/url] ensures that the permanently-destroyed sections for Origin: Shattered Ring using the Machine Shipset properly display as that shipset (adds missing graphical definitions to the Machine Shipset)
 [/list]
 [h3]When to Install[/h3]
-This mod can be safely added after the game has started, but should not be removed from a game in-progress.  It can theoretically be removed from a game in progress - any titanic, behemoth, or gargantuan ringworlds should revert to the fallback appearance for the Machine Shipset ([b]mammalian_01[/b]).  Back up your savegame before attempting to remove a mod.
+This mod can be safely added after the game has started, but should not be removed from a game in-progress. It can theoretically be removed from a game in progress - any titanic, behemoth, or gargantuan ringworlds should revert to the fallback appearance for the Machine Shipset ([b]mammalian_01[/b]). Back up your savegame before attempting to remove a mod.
 
 [h3]Known Issues[/h3]
-Overriding a megastructure results in the game logging an error in the error.log file.  Expect to see six errors like this:
+Overriding a megastructure results in the game logging an error in the error.log file. Expect to see six errors like this:
 [code]
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_behemoth_2 already exists, using the one at  file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 1
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_behemoth_restored already exists, using the one at  file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 190
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_gargantuan_2 already exists, using the one at  file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 1
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_gargantuan_restored already exists, using the one at  file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 196
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_titanic_2 already exists, using the one at  file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 1
-[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_titanic_restored already exists, using the one at  file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 179
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_behemoth_2 already exists, using the one at file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_behemoth_restored already exists, using the one at file: common/megastructures/zzz_behemoth_ringworld_overrides.txt line: 190
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_gargantuan_2 already exists, using the one at file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_gargantuan_restored already exists, using the one at file: common/megastructures/zzz_gargantuan_ringworld_overrides.txt line: 196
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ringworld_titanic_2 already exists, using the one at file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 1
+[23:42:22][game_singleobjectdatabase.h:165]: Object with key: ring_world_titanic_restored already exists, using the one at file: common/megastructures/zzz_titanic_ringworld_overrides.txt line: 179
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2644469566]Change Notes[/url]
