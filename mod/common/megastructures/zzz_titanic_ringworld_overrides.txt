@@ -229,6 +229,9 @@ ring_world_titanic_restored = {
 						graphical_culture = reptilian_01
 						graphical_culture = lithoid_01
 						graphical_culture = necroid_01
+						graphical_culture = nemesis_01
+						graphical_culture = aquatic_01
+						graphical_culture = toxoid_01
 					}
 				}
 			}

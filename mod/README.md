@@ -52,7 +52,8 @@ Overriding a megastructure results in the game logging an error in the error.log
     * Integrate underlying changes from Gigastructural Engineering
 * 2.1.0 Add compatibility trigger for other mods to check whether this one is active
 * 2.2.0 Mark as compatible with Stellaris version 3.7 "Canis Minor"
-    * Remove incorrect particle effects from the machine ringworld tech sections
+    * Remove incorrect particle effects from the Machine ringworld tech sections
+    * Support the Imperial, Aquatic, and Toxoid graphical cultures for overridden ring world megastructure objects (Gigastructural Engineering 3.27 added entities for these, but did not update the relevant triggers)
 
 ## Source Code
 
